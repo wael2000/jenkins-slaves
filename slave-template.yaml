@@ -1,11 +1,11 @@
 kind: Template
 apiVersion: v1
 metadata:
-  name: "jenkins-slave-sonarqube-dotnet"
+  name: "jenkins-slave-dotnet"
   annotations:
-    description: "The sonarqube scanner slave image for dotnet core with the global sonarscanner installed."
+    description: "The slave image for dotnet core."
     iconClass: "icon-jenkins"
-    tags: "jenkins,slave,sonarqube,dotnet,sonarscanner"
+    tags: "jenkins,slave,dotnet"
 objects:
 - kind: "BuildConfig"
   apiVersion: "v1"
@@ -61,7 +61,7 @@ parameters:
   required: true
 - name: "IMAGE_NAME"
   description: "The name of the image this build will produce"
-  value: "jenkins-slave-sonarqube-dotnet"
+  value: "jenkins-slave-dotnet"
   required: true
 - name: "IMAGE_STREAM_TAG"
   description: "The tag to associate with the image"
