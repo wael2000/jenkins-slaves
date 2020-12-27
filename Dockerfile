@@ -12,10 +12,10 @@ LABEL com.redhat.component="rh-dotnet31-jenkins-slave-container" \
       io.k8s.description="The jenkins slave dotnet image has the dotnet tools on top of the jenkins slave base image." \
       io.openshift.tags="openshift,jenkins,slave,dotnet,dotnet31"
 
-# COPY contrib/bin/scl_enable /usr/local/bin/scl_enable
 
-RUN yum install dotnet-sdk-3.1 -y --setopt=tsflags=nodocs && \
-    yum clean all -y 
+RUN dnf install dotnet-sdk-3.1
+#yum install dotnet-sdk-3.1 -y --setopt=tsflags=nodocs && \
+#    yum clean all -y 
 
 RUN chown -R 1001:0 $HOME && \
     chmod -R g+rw $HOME
