@@ -2,17 +2,10 @@ FROM openshift/jenkins-slave-base-centos7
 
 USER root
 
-ENV SONARQUBE_SCANNER_VERSION=4.4.2.1543 \
-    HOME=/home/jenkins 
-
-# Install .NET sdk rpm
-RUN rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
+ENV HOME=/home/jenkins 
 
 # Install headless Java and .NET sdk
-RUN yum install -y centos-release-scl-rh && \
-    INSTALL_PKGS="wget dotnet-sdk-2.1" && \
-    yum install -y --setopt=tsflags=nodocs install $INSTALL_PKGS && \
-    rpm -V $INSTALL_PKGS && \
+RUN yum install dotnet-sdk-3.1 -y && \
     yum clean all
 
 WORKDIR /
