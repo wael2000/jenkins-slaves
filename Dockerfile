@@ -23,7 +23,7 @@ ENV DOTNET_CORE_VERSION=3.1 \
     NUGET_XMLDOC_MODE=skip \
     DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
 
-COPY contrib/bin/scl_enable /usr/local/bin/scl_enable
+# COPY contrib/bin/scl_enable /usr/local/bin/scl_enable
 
 # Install
 RUN INSTALL_PKGS="rh-dotnet31 rh-nodejs10-npm" && \
