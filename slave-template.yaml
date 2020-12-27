@@ -42,7 +42,7 @@ objects:
 parameters:
 - name: "GIT_URL"
   description: "The URL of the repository with your application source code"
-  value: "https://github.com/Cingulara/openshift-templates.git"
+  value: "https://github.com/wael2000/jenkins-slaves.git"
   required: true
 - name: "GIT_BRANCH"
   description: "The branch within the repository which contains the applicable source code"
@@ -50,14 +50,14 @@ parameters:
   required: true
 - name: "GIT_CONTEXT_DIR"
   description: "The sub directory location of the docker file"
-  value: "jenkins-slave-images-sonarqube/dotnet-core-global/"
+  value: "."
 - name: "DOCKERFILE_PATH"
   description: "The path to the dockerfile to use when building the image."
   required: true
   value: "Dockerfile"
 - name: "BASE_IMAGE"
   description: "The name of the image to make a Jenkins slave."
-  value: "docker.io/openshift/jenkins-slave-base-centos7:latest"
+  value: "registry.redhat.io/openshift3/jenkins-slave-base-rhel7:latest"
   required: true
 - name: "IMAGE_NAME"
   description: "The name of the image this build will produce"
