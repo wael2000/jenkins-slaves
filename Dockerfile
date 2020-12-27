@@ -28,7 +28,7 @@ ENV DOTNET_CORE_VERSION=3.1 \
 # Install
 RUN INSTALL_PKGS="rh-dotnet31 rh-nodejs10-npm" && \
     yum install -y --setopt=tsflags=nodocs --disablerepo=\* \
-      --enablerepo=rhel-7-server-rpms,rhel-server-rhscl-7-rpms,rhel-7-server-dotnet-rpms \
+      --enablerepo=rhel-8-server-rpms,rhel-server-rhscl-8-rpms,rhel-8-server-dotnet-rpms \
       $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \
     yum clean all -y && \
