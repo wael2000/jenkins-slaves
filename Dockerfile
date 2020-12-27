@@ -25,6 +25,7 @@ ENV NPM_CONFIG_PREFIX=$HOME/.npm-global \
 #COPY contrib/bin/scl_enable /usr/local/bin/scl_enable
 #COPY contrib/bin/configure-agent /usr/local/bin/configure-agent
 
+RUN yum repolist
 RUN yum update --disableplugin=subscription-manager -y && rm -rf /var/cache/yum
 RUN yum install --disableplugin=subscription-manager dotnet-sdk-3.1 -y && rm -rf
 
