@@ -16,7 +16,7 @@ LABEL com.redhat.component="rh-dotnet31-jenkins-slave-container" \
 
 ENV NPM_CONFIG_PREFIX=$HOME/.npm-global \
     PATH=/opt/app-root/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
-    DOTNET_CORE_VERSION=3.1 \
+    DOTNET_CORE_VERSION=3.1 
     #BASH_ENV=/usr/local/bin/scl_enable \
     #ENV=/usr/local/bin/scl_enable \
     #PROMPT_COMMAND=". /usr/local/bin/scl_enable" \
